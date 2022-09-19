@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма входа или регистрации</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="./assets/js/main.js"></script>
+</head>
+<body>
+    <div class="auth-form__wrapper">
+        <div class="auth-form-wrap" id="auth-form">
+            <span class="auth-form__title">Вход или регистрация</span>
+            <form class="auth-form__form">
+                <label class="auth-form__field-label">
+                    <input type="text" required  placeholder="Номер телефона" class="auth-form__input" data-first-stage>
+                </label>
+                <label class="auth-form__field-label">
+                    <input type="text" required placeholder="Email" class="auth-form__input" data-first-stage>
+                </label>                
+                <label class="auth-form__label">
+                    <input type="checkbox" class="auth-form__check">
+                    <span class="auth-form__desc">
+                        Продолжая пользоваться сайтом и/или мобильным приложением, Вы соглашаетесь с <b>Политикой обработки персональных данных. Условия дистанционной продажи интернет-магазина Floema/</b>                        
+                    </span>
+                </label>
+                <button class="auth-form__btn" data-disabled-stage>Далее</button>
+            </form>
+            <form class="auth-form__form" data-stage-hidden style="display: none;">
+                <span class="auth-form__header">На указанный номер телефона совершен телефонный звонок</span>
+                <span class="auth-form__desc">Введите последние 4 цифры <br> входящего номера</span>
+                <label class="auth-form__field-label">
+                    <input type="text" placeholder="последние 4 цифры входящего звонка" class="auth-form__input">
+                </label>                
+                <button class="auth-form__btn">Ввести</button>
+            </form>
+            <span class="auth-form__notify">Повторный звонок возможен через <span class="seconds">30</span> сек.</span>
+        </div>
+    </div>
+</body>
+</html>
